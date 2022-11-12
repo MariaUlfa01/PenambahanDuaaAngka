@@ -152,6 +152,11 @@ public class PenambahanDuaaAngkaGUI extends javax.swing.JFrame {
         keluarBtn.setBackground(new java.awt.Color(51, 255, 51));
         keluarBtn.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         keluarBtn.setLabel("KELUAR");
+        keluarBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                keluarBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -202,6 +207,7 @@ public class PenambahanDuaaAngkaGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
           if(angkaPertamaTF.getText().equals("") || angkaKeduaTF.getText().equals("")){
         //peringatan teks tidak boleh kosong
+        JOptionPane.showMessageDialog(null, "input pertama dan kedua tidak boleh kosong");
         
     } else {
             int angkaPertama = Integer.valueOf(angkaPertamaTF.getText());
@@ -211,7 +217,7 @@ public class PenambahanDuaaAngkaGUI extends javax.swing.JFrame {
             
             hasilTF.setText(Integer.toString(hasil));
              
-            }JOptionPane.showMessageDialog(null, "input pertama dan kedua tidak boleh kosong");
+            }
     }//GEN-LAST:event_hitungBtnActionPerformed
 
     private void hapusBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hapusBtnActionPerformed
@@ -222,6 +228,11 @@ public class PenambahanDuaaAngkaGUI extends javax.swing.JFrame {
         angkaPertamaTF.requestFocus();
     
     }//GEN-LAST:event_hapusBtnActionPerformed
+
+    private void keluarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_keluarBtnActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_keluarBtnActionPerformed
 
     /**
      * @param args the command line arguments
