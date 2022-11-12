@@ -143,6 +143,11 @@ public class PenambahanDuaaAngkaGUI extends javax.swing.JFrame {
         hapusBtn.setBackground(new java.awt.Color(51, 255, 51));
         hapusBtn.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         hapusBtn.setLabel("HAPUS");
+        hapusBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hapusBtnActionPerformed(evt);
+            }
+        });
 
         keluarBtn.setBackground(new java.awt.Color(51, 255, 51));
         keluarBtn.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -208,6 +213,15 @@ public class PenambahanDuaaAngkaGUI extends javax.swing.JFrame {
              
             }JOptionPane.showMessageDialog(null, "input pertama dan kedua tidak boleh kosong");
     }//GEN-LAST:event_hitungBtnActionPerformed
+
+    private void hapusBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hapusBtnActionPerformed
+        // TODO add your handling code here:
+        angkaPertamaTF.setText(null);
+        angkaKeduaTF.setText("");
+        hasilTF.setText("");
+        angkaPertamaTF.requestFocus();
+    
+    }//GEN-LAST:event_hapusBtnActionPerformed
 
     /**
      * @param args the command line arguments
