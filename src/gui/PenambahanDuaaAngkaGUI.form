@@ -233,6 +233,9 @@
             <Property name="label" type="java.lang.String" value="HITUNG"/>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="hitungBtnActionPerformed"/>
+          </Events>
         </Component>
         <Component class="java.awt.Button" name="hapusBtn">
           <Properties>

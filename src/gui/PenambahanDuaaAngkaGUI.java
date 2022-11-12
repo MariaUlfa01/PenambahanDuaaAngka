@@ -5,6 +5,8 @@
  */
 package gui;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ACER
@@ -132,6 +134,11 @@ public class PenambahanDuaaAngkaGUI extends javax.swing.JFrame {
         hitungBtn.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         hitungBtn.setLabel("HITUNG");
         hitungBtn.setName(""); // NOI18N
+        hitungBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hitungBtnActionPerformed(evt);
+            }
+        });
 
         hapusBtn.setBackground(new java.awt.Color(51, 255, 51));
         hapusBtn.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -185,6 +192,22 @@ public class PenambahanDuaaAngkaGUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void hitungBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hitungBtnActionPerformed
+        // TODO add your handling code here:
+          if(angkaPertamaTF.getText().equals("") || angkaKeduaTF.getText().equals("")){
+        //peringatan teks tidak boleh kosong
+        
+    } else {
+            int angkaPertama = Integer.valueOf(angkaPertamaTF.getText());
+            int angkaKedua = Integer.valueOf(angkaKeduaTF.getText());
+             
+            int hasil = angkaPertama + angkaKedua;
+            
+            hasilTF.setText(Integer.toString(hasil));
+             
+            }JOptionPane.showMessageDialog(null, "input pertama dan kedua tidak boleh kosong");
+    }//GEN-LAST:event_hitungBtnActionPerformed
 
     /**
      * @param args the command line arguments
